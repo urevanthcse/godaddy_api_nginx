@@ -6,11 +6,11 @@ import requests
 def customer_setup(argv):
       #<customer_domain>will be your default subdomain always, Which should be given as an Arguments.
       #<point_to> IP to point to your subdomain.
-      customer_domain=""
-      ssl=""
+      customer_domain="13.127.43.247"
+      ssl="False"
 
       #GoDaddy Variable
-      godaddy={"key": "", "secrets": "", "domain": "", "match_type": "A", "ttl": 3600, "point_to": ""}
+      godaddy={"key": "revanth.unnam", "secrets": "ODE0MjAwOTJAQ2MK", "domain": "apptmart.com", "match_type": "A", "ttl": 3600, "point_to": "13.127.43.247"}
       for key, value in godaddy.items():
           if len(str(value))==0:
               print("Pass the correct Value in godaddy dictionary variable in the script (key: XXXXX, secrets: XXXXXX, etc...!!!).")
