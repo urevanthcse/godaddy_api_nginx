@@ -7,7 +7,7 @@ def customer_setup(argv):
       #<customer_domain>will be your default subdomain always, Which should be given as an Arguments.
       #<point_to> IP to point to your subdomain.
       customer_domain="13.127.43.247"
-      ssl="False"
+      ssl="true"
 
       #GoDaddy Variable
       godaddy={"key": "revanth.unnam", "secrets": "ODE0MjAwOTJAQ2MK", "domain": "apptmart.com", "match_type": "A", "ttl": 3600, "point_to": "13.127.43.247"}
@@ -26,9 +26,9 @@ def customer_setup(argv):
           if len(sys.argv)<2:
               print('app_setup.py -d <customer_domain> -s <ssl==true/false>')
               sys.exit()
-          opts, args = getopt.getopt(argv, "d:s:h",["dns=", "ssl="])
+          opts, args = getopt.getopt(argv, "d:s:h",["dns=customer_domain.apptmart.com", "ssl=true"])
       except getopt.GetoptError:
-          print('app_s etup.py -d <customer_domain> -s <ssl==true/false>')
+          print('app_setup.py -d <customer_domain> -s <ssl==true/false>')
           sys.exit(2)
       for opt, arg in opts:
           if opt == "-h":
